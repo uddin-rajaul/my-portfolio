@@ -57,13 +57,13 @@ export default function Navigation() {
               <Mail className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://github.com/uddin-rajaul"
               className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
             >
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/rajaul-uddin/"
               className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
             >
               <Linkedin className="w-5 h-5" />
@@ -109,13 +109,13 @@ export default function Navigation() {
                   <Mail className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/uddin-rajaul"
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/rajaul-uddin/"
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
                 >
                   <Linkedin className="w-5 h-5" />

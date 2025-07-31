@@ -83,7 +83,10 @@ export default function BlogPage() {
         <div className="mt-16 text-center">
           <p className="text-gray-400 text-sm">
             More articles coming soon. Follow me on{" "}
-            <a href="https://github.com/uddin-rajaul" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 hover:underline transition-colors">
+            <a
+              href="https://github.com/uddin-rajaul"
+              className="text-purple-400 hover:text-purple-300 hover:underline transition-colors"
+            >
               GitHub
             </a>{" "}
             for updates.

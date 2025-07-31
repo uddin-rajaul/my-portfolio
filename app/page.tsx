@@ -57,6 +57,20 @@ export default function HomePage() {
     },
   ]
 
+  const skills = [
+    { name: "Python", logo: "/python.svg?height=40&width=40" },
+    { name: "SQL", logo: "/sql-database-generic-svgrepo-com.svg?height=40&width=40" },
+    { name: "Django", logo: "/django-icon-svgrepo-com.svg?height=40&width=40" },
+    { name: "FastAPI", logo: "/fastapi-svgrepo-com.svg?height=40&width=40" },
+    { name: "PostgreSQL", logo: "/pgsql-svgrepo-com.svg?height=40&width=40" },
+    { name: "Docker", logo: "/docker-svgrepo-com.svg?height=40&width=40" },
+    { name: "GCP", logo: "/gcp.svg?height=40&width=40" },
+    { name: "Git", logo: "/git.svg?height=40&width=40" },
+    { name: "AWS", logo: "/aws.svg?height=40&width=40" },
+    { name: "Terraform", logo: "/terraform.svg?height=40&width=40" },
+    { name: "CI/CD", logo: "/cicd.svg?height=40&width=40" },
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors">
       {/* Scroll to Top Button */}
@@ -129,13 +143,13 @@ export default function HomePage() {
                   <Phone className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://github.com/uddin-rajaul" target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/uddin-rajaul"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300"
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/rajaul-uddin/" target="_blank" rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/rajaul-uddin/"
                   className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -291,20 +305,7 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
-            {[
-              { name: "Python", logo: "/python.svg?height=40&width=40" },
-              { name: "SQL", logo: "/sql-database-generic-svgrepo-com.svg?height=40&width=40" },
-              { name: "Django", logo: "/django-icon-svgrepo-com.svg?height=40&width=40" },
-              { name: "FastAPI", logo: "/fastapi-svgrepo-com.svg?height=40&width=40" },
-              { name: "PostgreSQL", logo: "/pgsql-svgrepo-com.svg?height=40&width=40" },
-              { name: "Docker", logo: "/docker-svgrepo-com.svg?height=40&width=40" },
-              { name: "GCP", logo: "/gcp.svg?height=40&width=40" },
-              { name: "Git", logo: "/git.svg?height=40&width=40" },
-              { name: "AWS", logo: "/aws.svg?height=40&width=40" },
-              { name: "Terraform", logo: "/terraform.svg?height=40&width=40" },
-              { name: "CI/CD", logo: "/cicd.svg?height=40&width=40" },
-                          
-            ].map((skill, index) => (
+            {skills.map((skill, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center hover:scale-110 transition-all duration-300 group cursor-pointer"

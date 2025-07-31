@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
+import ContactForm from "./contact-form"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -79,13 +80,13 @@ export default function ContactPage() {
               <CardContent>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com/uddin-rajaul" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/uddin-rajaul"
                     className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
                   >
                     <Github className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/rajaul-uddin/" target="_blank" rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/rajaul-uddin/"
                     className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
                   >
                     <Linkedin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
@@ -106,7 +107,7 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-sm transition-colors">
-                  Currently working at Gorkhali Agents and open to discussing new opportunities, collaborations, or
+                  Currently interning at Gorkhali Agents and open to discussing new opportunities, collaborations, or
                   interesting projects in software development.
                 </p>
               </CardContent>
@@ -119,79 +120,7 @@ export default function ContactPage() {
               <CardTitle className="text-gray-900 dark:text-white transition-colors">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition-colors"
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition-colors resize-none"
-                    placeholder="Tell me about your project, opportunity, or just say hello!"
-                  ></textarea>
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 flex items-center justify-center gap-2"
-                >
-                  <Send className="w-4 h-4" />
-                  Send Message
-                </Button>
-              </form>
+              <ContactForm />
             </CardContent>
           </Card>
         </div>
