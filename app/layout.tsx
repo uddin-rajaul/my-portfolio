@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Rajaul Uddin - Software Engineer & Backend Developer",
   description:
     "BSc CSIT graduate passionate about software engineering and backend development. Skilled in Python, SQL, and building scalable applications.",
+  icons: {
+    icon: "/images/cat-programmer.png",
+  },
     generator: 'v0.dev'
 }
 

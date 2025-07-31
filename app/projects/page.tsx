@@ -92,7 +92,7 @@ export default function ProjectsPage() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-lg dark:hover:shadow-purple-900/20 transition-all duration-300"
+              className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-lg dark:hover:shadow-purple-900/20 transition-all duration-300 hover:scale-[1.02]"
             >
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">

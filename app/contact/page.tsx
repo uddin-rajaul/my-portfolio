@@ -81,13 +81,13 @@ export default function ContactPage() {
                 <div className="flex gap-4">
                   <a
                     href="https://github.com/uddin-rajaul"
-                    className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
+                    className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors hover:scale-110"
                   >
                     <Github className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/rajaul-uddin/"
-                    className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
+                    className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors hover:scale-110"
                   >
                     <Linkedin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                   </a>

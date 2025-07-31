@@ -63,20 +63,20 @@ export default function DjangoRESTFrameworkGuide() {
 from .models import Product
 
 class ProductSerializer(serializers.ModelSerializer):
-    price_display = serializers.SerializerMethodField()
-    
-    class Meta:
-        model = Product
-        fields = ['id', 'name', 'price', 'price_display', 'category']
-        read_only_fields = ['id']
-    
-    def get_price_display(self, obj):
-        return f"$${obj.price.toFixed(2)}"
-    
-    def validate_price(self, value):
-        if value <= 0:
-            raise serializers.ValidationError("Price must be positive")
-        return value`}
+  price_display = serializers.SerializerMethodField()
+  
+  class Meta:
+      model = Product
+      fields = ['id', 'name', 'price', 'price_display', 'category']
+      read_only_fields = ['id']
+  
+  def get_price_display(self, obj):
+      return f"$${"{"}obj.price:.2f{'}'}"
+  
+  def validate_price(self, value):
+      if value <= 0:
+          raise serializers.ValidationError("Price must be positive")
+      return value`}
               </pre>
 
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
@@ -98,18 +98,18 @@ from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 
 class ProductViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['category', 'is_active']
-    search_fields = ['name', 'description']
-    
-    @action(detail=True, methods=['post'])
-    def set_featured(self, request, pk=None):
-        product = self.get_object()
-        product.is_featured = True
-        product.save()
-        return Response({'status': 'featured set'})`}
+  queryset = Product.objects.all()
+  serializer_class = ProductSerializer
+  filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+  filterset_fields = ['category', 'is_active']
+  search_fields = ['name', 'description']
+  
+  @action(detail=True, methods=['post'])
+  def set_featured(self, request, pk=None):
+      product = self.get_object()
+      product.is_featured = True
+      product.save()
+      return Response({'status': 'featured set'})`}
               </pre>
 
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
@@ -127,20 +127,22 @@ class ProductViewSet(viewsets.ModelViewSet):
               <pre className="bg-gray-100 dark:bg-gray-900 p-4 rounded-lg text-sm text-gray-800 dark:text-gray-200 overflow-x-auto mb-8">
                 {`# settings.py
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
+  'DEFAULT_AUTHENTICATION_CLASSES': [
+      'rest_framework.authentication.TokenAuthentication',
+  ],
+  'DEFAULT_PERMISSION_CLASSES': [
+      'rest_framework.permissions.IsAuthenticated',
+  ],
 }
 
 # Custom permission
+from rest_framework import permissions
+
 class IsOwnerOrReadOnly(permissions.BasePermission):
-    def has_object_permission(self, request, view, obj):
-        if request.method in permissions.SAFE_METHODS:
-            return True
-        return obj.owner == request.user`}
+  def has_object_permission(self, request, view, obj):
+      if request.method in permissions.SAFE_METHODS:
+          return True
+      return obj.owner == request.user`}
               </pre>
 
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
