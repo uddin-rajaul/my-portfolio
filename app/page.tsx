@@ -157,12 +157,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Cat Programmer Illustration */}
+            {/* Luffy Programmer Illustration */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-200/50 to-purple-300/50 dark:from-purple-600/20 dark:to-purple-700/20 rounded-3xl blur-2xl transform rotate-6 transition-colors"></div>
                 <img
-                  src="/images/cat-programmer-clean.png"
+                  src="/images/luffy-developer.png"
                   alt="Cat programmer working at desk"
                   className="relative w-full max-w-lg h-auto drop-shadow-2xl"
                 />

@@ -63,7 +63,7 @@ export default function AboutPage() {
                   </Badge>
                 </div>
                 <div className="flex items-center gap-4 mb-3 text-gray-500 dark:text-gray-400 transition-colors">
-                  <span className="font-medium">Gorkhali Agents</span>
+                  <span className="font-medium">Omniscience</span>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     <span>April 2025 - Present</span>

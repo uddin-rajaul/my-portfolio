@@ -32,11 +32,6 @@ export default function BlogPage() {
           slug: "database-design-patterns",
         },
         {
-          date: "Oct 25",
-          title: "Simple guide to Django REST Framework",
-          slug: "django-rest-framework-guide",
-        },
-        {
           date: "Sep 12",
           title: "Cloud deployment with GCP and Terraform",
           slug: "gcp-terraform-deployment",
