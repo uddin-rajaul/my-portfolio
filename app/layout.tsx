@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter } from 'next/font/google'
 import "./globals.css"
 import Navigation from "@/components/navigation"
 import Breadcrumb from "@/components/breadcrumb"
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "BSc CSIT graduate passionate about software engineering and backend development. Skilled in Python, SQL, and building scalable applications.",
   icons: {
-    icon: "/images/cat-programmer.png",
+    icon: "/images/luffy-developer.png",
   },
     generator: 'v0.dev'
 }

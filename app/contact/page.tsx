@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react'
 import ContactForm from "./contact-form"
 import type { Metadata } from "next"
 

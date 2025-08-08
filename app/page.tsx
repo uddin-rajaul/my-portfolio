@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, Phone, ArrowRight, Code, Database, Cloud, Zap, Users } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, ArrowRight, Code, Database, Cloud, Zap, Users } from 'lucide-react'
 import ScrollToTop from "@/components/scroll-to-top"
 
 export default function HomePage() {

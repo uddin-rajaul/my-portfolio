@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react"
 import { Button } from "@/components/ui/button"
-import { Send, CheckCircle, AlertCircle } from "lucide-react"
+import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { validateContactForm } from "./actions"
 import emailjs from "@emailjs/browser"
 

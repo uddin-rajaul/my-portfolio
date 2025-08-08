@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Calendar, ExternalLink } from "lucide-react"
+import { MapPin, Calendar, ExternalLink } from 'lucide-react'
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div className="border-l-2 border-purple-400 dark:border-purple-500 pl-6">
               <div className="mb-6">
                 <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors">Intern</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors">DevSecOps Engineer</h3>
                   <Badge
                     variant="secondary"
                     className="bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-colors"

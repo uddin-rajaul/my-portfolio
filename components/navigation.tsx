@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 const navigation = [
@@ -36,7 +36,7 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-200 font-medium text-sm relative hover:scale-105", // Added hover:scale-105
+                  "text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-200 font-medium text-sm relative hover:scale-105",
                   pathname === item.href && "text-purple-600 dark:text-purple-400",
                 )}
               >
@@ -52,19 +52,19 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="mailto:uddin.rajaul1@gmail.com"
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110" // Added hover:scale-110
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-5 h-5" />
             </a>
             <a
               href="https://github.com/uddin-rajaul"
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110" // Added hover:scale-110
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
             >
               <Github className="w-5 h-5" />
             </a>
             <a
               href="https://www.linkedin.com/in/rajaul-uddin/"
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110" // Added hover:scale-110
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
             >
               <Linkedin className="w-5 h-5" />
             </a>
@@ -91,7 +91,7 @@ export default function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-200 font-medium hover:scale-105", // Added hover:scale-105
+                    "block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-200 font-medium hover:scale-105",
                     pathname === item.href && "text-purple-600 dark:text-purple-400",
                   )}
                   onClick={() => setMobileMenuOpen(false)}
@@ -104,19 +104,19 @@ export default function Navigation() {
               <div className="flex items-center space-x-4 px-3 py-2 border-t border-gray-200 dark:border-gray-800 mt-2">
                 <a
                   href="mailto:uddin.rajaul1@gmail.com"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110" // Added hover:scale-110
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
                 <a
                   href="https://github.com/uddin-rajaul"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110" // Added hover:scale-110
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/rajaul-uddin/"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110" // Added hover:scale-110
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>

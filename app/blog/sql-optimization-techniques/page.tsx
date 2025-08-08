@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock } from "lucide-react"
+import { ArrowLeft, Calendar, Clock } from 'lucide-react'
 import Link from "next/link"
 import type { Metadata } from "next"
 

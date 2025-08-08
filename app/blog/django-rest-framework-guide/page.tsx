@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock } from "lucide-react"
+import { ArrowLeft, Calendar, Clock } from 'lucide-react'
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -71,7 +71,7 @@ class ProductSerializer(serializers.ModelSerializer):
       read_only_fields = ['id']
   
   def get_price_display(self, obj):
-      return f"$${"{"}obj.price:.2f{'}'}"
+      return f"$${obj.price:.2f}"
   
   def validate_price(self, value):
       if value <= 0:
