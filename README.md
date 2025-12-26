@@ -7,7 +7,9 @@ A modern, minimalist portfolio website built with Next.js 14, featuring a photog
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?style=flat-square&logo=tailwind-css)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql)
 
-## ✨ Features
+![Portfolio Preview](public/images/image.png)
+
+## Features
 
 - **Photography Gallery** - Pinterest-style masonry layout with auto card sizing
 - **Admin Dashboard** - Password-protected photo management
@@ -18,7 +20,7 @@ A modern, minimalist portfolio website built with Next.js 14, featuring a photog
 - **Blog** - Technical articles with syntax highlighting
 - **Contact Form** - With form validation
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
@@ -29,7 +31,7 @@ A modern, minimalist portfolio website built with Next.js 14, featuring a photog
 - **Animations**: Framer Motion
 - **Deployment**: Vercel
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -40,22 +42,26 @@ A modern, minimalist portfolio website built with Next.js 14, featuring a photog
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/uddin-rajaul/my-portfolio.git
    cd my-portfolio
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Create `.env.local` from the example:
+
    ```bash
    cp .env.example .env.local
    ```
 
 4. Update `.env.local` with your credentials:
+
    ```env
    DATABASE_URL=postgresql://user:password@host:5432/database
    SECRET_KEY=your-secret-key
@@ -69,13 +75,14 @@ A modern, minimalist portfolio website built with Next.js 14, featuring a photog
    ```
 
 5. Run the development server:
+
    ```bash
    pnpm dev
    ```
 
 6. Open [http://localhost:3000](http://localhost:3000)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── app/
@@ -105,15 +112,16 @@ A modern, minimalist portfolio website built with Next.js 14, featuring a photog
     └── images/           # Static assets
 ```
 
-## 🔐 Admin Access
+## Admin Access
 
 Navigate to `/photography/admin` and enter your `ADMIN_PASSWORD` to:
+
 - Upload new photos
 - Edit photo details (title, location, description)
 - Delete photos
 - View visitor analytics
 
-## 🌐 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -124,24 +132,25 @@ Navigate to `/photography/admin` and enter your `ADMIN_PASSWORD` to:
 
 ### Environment Variables for Production
 
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | PostgreSQL connection string (use Neon/Supabase) |
-| `SECRET_KEY` | Random 32-byte hex string |
-| `JWT_SECRET` | Random 32-byte hex string |
-| `ALGORITHM` | `HS256` |
-| `ACCESS_TOKEN_EXPIRE_MINUTES` | `1440` (24 hours) |
-| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name |
-| `CLOUDINARY_API_KEY` | Cloudinary API key |
-| `CLOUDINARY_API_SECRET` | Cloudinary API secret |
-| `ADMIN_PASSWORD` | Strong password for admin access |
+| Variable                            | Description                                      |
+| ----------------------------------- | ------------------------------------------------ |
+| `DATABASE_URL`                      | PostgreSQL connection string (use Neon/Supabase) |
+| `SECRET_KEY`                        | Random 32-byte hex string                        |
+| `JWT_SECRET`                        | Random 32-byte hex string                        |
+| `ALGORITHM`                         | `HS256`                                          |
+| `ACCESS_TOKEN_EXPIRE_MINUTES`       | `1440` (24 hours)                                |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name                            |
+| `CLOUDINARY_API_KEY`                | Cloudinary API key                               |
+| `CLOUDINARY_API_SECRET`             | Cloudinary API secret                            |
+| `ADMIN_PASSWORD`                    | Strong password for admin access                 |
 
-## 📝 License
+## License
 
 MIT License - feel free to use this for your own portfolio!
 
-## 👤 Author
+## Author
 
 **Rajaul Uddin**
+
 - GitHub: [@uddin-rajaul](https://github.com/uddin-rajaul)
 - LinkedIn: [rajaul-uddin](https://linkedin.com/in/rajaul-uddin)
