@@ -55,20 +55,38 @@ function calculateSize(width: number, height: number): 'normal' | 'tall' | 'wide
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { title, location, description, image } = body;
+    const { title, location, description, image, cloudinary_url, cloudinary_public_id, width, height } = body;
     
-    if (!title || !image) {
+    if (!title) {
       return NextResponse.json(
-        { error: 'Title and image are required' },
+        { error: 'Title is required' },
         { status: 400 }
       );
     }
     
-    // Upload to Cloudinary
-    const uploadResult = await uploadToCloudinary(image, 'photography');
+    let finalUrl = cloudinary_url;
+    let finalPublicId = cloudinary_public_id;
+    let finalWidth = width;
+    let finalHeight = height;
+    
+    // If image base64 is provided (legacy), upload to Cloudinary
+    if (image && !cloudinary_url) {
+      const uploadResult = await uploadToCloudinary(image, 'photography');
+      finalUrl = uploadResult.secure_url;
+      finalPublicId = uploadResult.public_id;
+      finalWidth = uploadResult.width;
+      finalHeight = uploadResult.height;
+    }
+    
+    if (!finalUrl) {
+      return NextResponse.json(
+        { error: 'Image is required' },
+        { status: 400 }
+      );
+    }
     
     // Auto-calculate size based on aspect ratio
-    const autoSize = calculateSize(uploadResult.width, uploadResult.height);
+    const autoSize = calculateSize(finalWidth, finalHeight);
     
     // Insert into database
     const result = await query(
@@ -79,11 +97,11 @@ export async function POST(request: NextRequest) {
         title,
         location || '',
         description || '',
-        uploadResult.secure_url,
-        uploadResult.public_id,
+        finalUrl,
+        finalPublicId,
         autoSize,
-        uploadResult.width,
-        uploadResult.height,
+        finalWidth,
+        finalHeight,
       ]
     );
     

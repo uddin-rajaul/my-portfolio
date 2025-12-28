@@ -177,14 +177,40 @@ export default function PhotographyAdminPage() {
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      // Just store the file for later upload
+      setNewPhoto({ ...newPhoto, image: file as unknown as string });
+      // Create preview
       const reader = new FileReader();
       reader.onloadend = () => {
-        const base64 = reader.result as string;
-        setNewPhoto({ ...newPhoto, image: base64 });
-        setPreviewImage(base64);
+        setPreviewImage(reader.result as string);
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const uploadToCloudinaryDirect = async (file: File) => {
+    // Get signature from our API
+    const sigResponse = await fetch('/api/cloudinary-signature');
+    const { signature, timestamp, cloudName, apiKey } = await sigResponse.json();
+    
+    // Upload directly to Cloudinary
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('signature', signature);
+    formData.append('timestamp', timestamp.toString());
+    formData.append('api_key', apiKey);
+    formData.append('folder', 'photography');
+    
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+      { method: 'POST', body: formData }
+    );
+    
+    if (!response.ok) {
+      throw new Error('Failed to upload to Cloudinary');
+    }
+    
+    return response.json();
   };
 
   const handleAddPhoto = async () => {
@@ -192,10 +218,23 @@ export default function PhotographyAdminPage() {
     
     try {
       setUploading(true);
+      
+      // Upload directly to Cloudinary first
+      const cloudinaryResult = await uploadToCloudinaryDirect(newPhoto.image as unknown as File);
+      
+      // Then save metadata to our database
       const response = await fetch("/api/photos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newPhoto),
+        body: JSON.stringify({
+          title: newPhoto.title,
+          location: newPhoto.location,
+          description: newPhoto.description,
+          cloudinary_url: cloudinaryResult.secure_url,
+          cloudinary_public_id: cloudinaryResult.public_id,
+          width: cloudinaryResult.width,
+          height: cloudinaryResult.height,
+        }),
       });
       
       if (response.ok) {
