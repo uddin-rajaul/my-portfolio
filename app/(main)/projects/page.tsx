@@ -7,6 +7,15 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    title: "Data Pipeline Automation",
+    description:
+      "A modern ELT pipeline using dbt Core and Apache Airflow (via Cosmos) on Snowflake. Includes automated documentation, data quality tests, and dimensional modeling.",
+    tech: ["dbt", "Airflow", "Snowflake", "Docker"],
+    github: "https://github.com/uddin-rajaul/Data-Pipeline-Project-dbt-Airflow-",
+    demo: null,
+    status: "Completed",
+  },
+  {
     title: "YapBoard – AI-Powered Whiteboard",
     description:
       "An innovative whiteboard application with AI-powered features including real-time background removal using U²-Net architecture.",

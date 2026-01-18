@@ -25,6 +25,7 @@ const links = [
   {
     category: "Recent Work",
     items: [
+      { name: "Data Pipeline", href: "https://github.com/uddin-rajaul/Data-Pipeline-Project-dbt-Airflow-", external: true },
       { name: "YapBoard", href: "https://github.com/knockboard/yapboard", external: true },
       { name: "E-Commerce API", href: "https://github.com/uddin-rajaul/e-com", external: true },
     ],

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AsciiArt } from "@/components/home/ascii-art"
 import { QuickLinks } from "@/components/home/quick-links"
 import { Hero } from "@/components/home/hero"
+import { FeaturedProject } from "@/components/home/featured-project"
 
 export default function HomePage() {
   return (
@@ -96,6 +97,8 @@ export default function HomePage() {
         </div>
 
         <QuickLinks />
+
+        <FeaturedProject />
       </div>
     </div>
   )
